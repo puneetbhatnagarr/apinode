@@ -13,7 +13,7 @@ connectdb();
 
 
 app.get("/",(req,res)=>{
-    res.send('hello i am api')
+    res.send('server is listening at http://localhost:4000')
 
 })
 const web = require('./routes/web.js');
