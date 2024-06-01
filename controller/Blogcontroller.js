@@ -39,7 +39,7 @@ class Blogcontroller{
     }
     static blogview=async(req,res)=>{
         try{
-            res.header("Access-Control-Allow-Origin","*");
+            res.setHeader("Access-Control-Allow-Origin","*");
             const viewresult = await blogModel.findById(req.params.id)
             res.status(200).json({
                
@@ -71,7 +71,7 @@ class Blogcontroller{
     }
     static blogdelete=async(req,res)=>{
         try{
-             res.header("Access-Control-Allow-Origin","*");
+            res.setHeader("Access-Control-Allow-Origin","*");
             const deleteresult = await blogModel.findByIdAndDelete(req.params.id)
             res.status(200).json({
                 success:true,
